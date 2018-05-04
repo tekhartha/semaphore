@@ -80,11 +80,11 @@ void sell_seats()
 			all_out++; // increment all_out to break out of loop
 			cout << pname << " sees no seats left" << endl;
 		}
-		sleep ( (unsigned)rand()%10 + 1);
 		/***/
 		sbuf.sem_op = 1; // semaphore signal/increment
 		semop(semid, &sbuf, 1); // perform operation
 		/***/
+		sleep ( (unsigned)rand()%10 + 1);
 	}
 }
 
